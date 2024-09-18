@@ -19,4 +19,8 @@ communicate over the Internet.
 
 ### Architecture of this project....
 
+### Scope :
+ A user can deploy code on AWS Lambda without concern for backend servers. The API Gateway facilitates communication between the server and client.
+Upon deploying code on Lambda, a notification is sent to SQS via SNS.
+
 ![image](API-Gateway.png)
