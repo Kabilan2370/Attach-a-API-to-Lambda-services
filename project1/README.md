@@ -15,6 +15,8 @@ It provides a service for sending messages. Amazon SNS acts as a single message 
 and generally available in mid 2006. It supports programmatic sending of messages via web service applications as a way to
 communicate over the Internet.
 
+![image](SNS.png)
+
 ### Architecture of this project....
 
 ![image](API-Gateway.png)
