@@ -1,1 +1,3 @@
+### Architecture of this project....
 
+![image](API-Gateway.png)
