@@ -1,4 +1,4 @@
-## Project scop :
+## Project scope :
   - Implement an Elastic Container Registry image on AWS Lambda. To facilitate an additional server-client interaction, I utilized a REST API.
 
 ### What is Elastic Container Registery ?
