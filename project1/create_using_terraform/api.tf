@@ -32,7 +32,7 @@ resource "aws_lambda_function" "test_lambda" {
 
   source_code_hash = data.archive_file.lambda.output_base64sha256
 
-  runtime = "Python 3.12"
+  runtime = "python3.12"
 
   environment {
     variables = {
@@ -81,14 +81,15 @@ resource "aws_api_gateway_method" "method" {
   http_method   = "POST"
   resource_id   = aws_api_gateway_resource.resource.id
   rest_api_id   = aws_api_gateway_rest_api.api.id
-  lambda        = aws_lambda_function.test_lambda.arn
+  #lambda        = aws_lambda_function.test_lambda.arn
 }
 
 resource "aws_api_gateway_integration" "integration" {
   http_method = aws_api_gateway_method.method.http_method
   resource_id = aws_api_gateway_resource.resource.id
   rest_api_id = aws_api_gateway_rest_api.api.id
-  type        = "LAMBDA FUNCTION"
+  type        = "AWS"
+  uri         = aws_lambda_function.test_lambda.arn
 }
 
 resource "aws_api_gateway_deployment" "deployment" {
